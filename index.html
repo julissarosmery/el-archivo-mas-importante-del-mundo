@@ -21,7 +21,7 @@
 </body>
 
 </html> -->
-<!-- A.2 transformando funcion a ES6 -->
+<!-- A.2 transformando funcion a ES6 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,9 +32,40 @@
   <title>Data Dashboard</title>
 </head>
 <body>
-    
   <input id="crearventana" type="button" value="machuca aqui 😆"></input>
 <script>
+  let miventana;
+   crearventan=()=> {
+    miventana=window.open("http://www.google.com");
+  }
+  document.getElementById("crearventana").addEventListener('click', crearventan);
+
+</script>
+</body>
+
+</html> -->
+<!-- A.3 añadiendo una funcion mas ..ahora son dos botones y 2 funciones en ES6 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+ 
+  <link rel="stylesheet" href="style.css" />
+ 
+  <title>Data Dashboard</title>
+</head>
+<body>
+
+    
+  <input id="crearventana" type="button" value="machuca aqui 😆"></input>
+  <input id="botonyoutube" type="button" value="abrir youtube 😆"></input>
+<script>
+  let ventanayoutube;
+  abrirVentana=()=>{
+    ventanayoutube=window.open("https://www.youtube.com/watch?v=zd8eVrXhs7Y");
+  }
+  document.getElementById("botonyoutube").addEventListener('click',abrirVentana);
+
   let miventana;
    crearventan=()=> {
     miventana=window.open("http://www.google.com");
