@@ -1,0 +1,267 @@
+<!-- plantilla para practicar
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+  
+    <link rel="stylesheet" href="style.css" />
+  
+    <title>practicando/title>
+  </head>
+  <body>
+
+    
+    <script>
+      
+    </script>
+  </body>
+
+</html> -->
+
+<!-- A.1 creando funcion con ES5
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+  
+  
+    <title>Data Dashboard</title>
+  </head>
+  <body>
+      
+    <button onclick="crearventana()">machuca aqui</button>
+    <script>
+      var miventana;
+      function crearventana(){
+        miventana=window.open("http://www.google.com");
+      }
+
+    </script>
+  </body>
+
+</html> -->
+
+<!-- A.2 transformando funcion a ES6 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+  
+    
+  
+    <title>Data Dashboard</title>
+  </head>
+  <body>
+    <input id="crearventana" type="button" value="machuca aqui 😆"></input>
+    <script>
+      let miventana;
+      crearventan=()=> {
+        miventana=window.open("http://www.google.com");
+      }
+      document.getElementById("crearventana").addEventListener('click', crearventan);
+
+    </script>
+  </body>
+
+</html> -->
+
+<!-- A.3 añadiendo una funcion mas ..ahora son dos botones y 2 funciones en ES6 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+  
+    <link rel="stylesheet" href="style.css" />
+  
+    <title>Data Dashboard</title>
+  </head>
+  <body>
+
+        
+    <input id="crearventana" type="button" value="machuca aqui 😆"></input>
+    <input id="botonyoutube" type="button" value="abrir youtube 😆"></input>
+    <script>
+      let ventanayoutube;
+      abrirVentana=()=>{
+        ventanayoutube=window.open("https://www.youtube.com/watch?v=zd8eVrXhs7Y");
+      }
+      document.getElementById("botonyoutube").addEventListener('click',abrirVentana);
+
+      let miventana;
+      crearventan=()=> {
+        miventana=window.open("http://www.google.com");
+      }
+      document.getElementById("crearventana").addEventListener('click', crearventan);
+
+    </script>
+  </body>
+
+</html> -->
+
+<!-- B .1 mamupulando un array   ..datos estraidos de expocicion de zareala 27/06/18
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+  
+    <title>practicando</title>
+  </head>
+  <body>
+      
+    
+    <script>
+      var numbers=[1,4,9];
+        const doble=numbers.map(number=>number*2
+      
+        )
+        console.log(doble);
+    </script>
+  </body>
+
+</html>  -->
+
+<!-- C.1 PRANCTICANDO CON JAZZZ
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    meta charset="UTF-8">
+ 
+ 
+    <title>practicando</title>
+</head>
+<body>
+  <script>
+  let progreso = 
+  {
+    '46644620' : {
+        'intro' : {
+            'time' : 365,
+            'percent' : 100,
+            'score' : 20,
+        }
+    },
+    '72352825' : {
+        'intro' : {
+            'time' : 500,
+            'percent' : 90,
+            'score' : 11,
+        }
+    }
+  }
+
+  let usuario = [
+  {
+      'id' : '46644620',
+      'name' : 'julissa',
+      'age' : 27,
+      'district' : 'Chorrillos'
+  },
+
+    {
+      'id' : '72352825',
+      'name' : 'jahzell',
+      'age' : 18,
+      'district' : 'Breña'
+  }
+  ]
+
+  let progreso2 = Object.keys(progreso);
+  console.log(progreso2); 
+
+
+</script>
+</body>
+
+</html>--> 
+
+<!-- D.1 creando objetos ES6 29/06/18 siguiendo guia de youtube
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>practicando</title>
+  </head>
+  <body>
+
+      
+    
+    <script>
+      const pero={nombre:"rex",edad:5,vivo:true};
+      const pero2={nombre:"tomi",edad:5,vivo:false};
+      console.log(pero2);
+    </script>
+  </body>
+
+</html> -->
+
+<!-- E.1 arays 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+  
+    <title>practicando</title>
+  </head>
+  <body>
+      
+    
+    <script>
+
+        //encontrar al elemento dentro del array por su indice
+    // listNumbres=[1,2,3,true,5,6,"laguna",8,9,11];
+    // console.log(listNumbres[6]);
+
+        //encontar cuantos elemnentos contiene el array con lengt
+    // listNumbres=[1,2,3,true,5,6,"laguna",8,9,11];
+    // console.log(listNumbres.length);
+
+        //para ordenar de manera alfabetica se usa el metodo sort()
+    // listNumbres=["b","c","a",true,5,6,"laguna",8,9,11];
+
+        //para añadirle un dato se utiliza el metodo
+    // listNumbres.sort();
+    // console.log(listNumbres.sort());
+        //para añadir un elemento al array
+
+    // listNumbres.push(34);
+
+        // crear un array vacío y luego definir cada elemento de forma individual
+    // list =[];
+    // list[0]=1;
+    // list[1]=2;
+    // list[2]=3;
+    // list[3]=4;
+    // list[4]=5;
+    // list[5]=6;
+    // list[6]=7;
+    // list[7]=8;
+    // list[8]=9;
+
+    // console.log(list);
+
+
+
+    </script>
+  </body>
+
+</html>  -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+ 
+  title>practicando</title>
+</head>
+<body>
+    
+  
+<script>
+
+
+
+</script>
+</body>
+
+</html>   -->
