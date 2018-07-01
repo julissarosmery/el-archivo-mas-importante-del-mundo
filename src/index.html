@@ -581,9 +581,215 @@
     // console.log(familia.find(esnato));
           //en ES6 flecha
     // const resultado = familia.find(hermana => hermana.nombre === 'nato' );
-
     // console.log(resultado);
 
+      // Array.prototype.findIndex()
+        // Devuelve el índice hallado en el array si un elemento en el array 
+        // satisface la función de testeo proporcionada, o -1 si no se halla ninguno.
+        // El método findIndex() devuelve el índice del primer elemento de un array
+        // cumpla con la función de prueba proporcionada. En caso contrario devuelve -1.
+    // primos=[];
+    // primos[0]=1;
+    // primos[1]=12;
+    // primos[2]=10;
+    // primos[3]=50;
+    // primos[4]=2;
+    // primos[5]=3;
+    //   // dame el primer elemento que sea mayor a 40
+    // primerElemento=(ele)=>{
+    // return ele > 40;
+    // }
+    // console.log(primos.findIndex(primerElemento));//3
+
+            //plantilla sobre la cual trabajaremos:
+    // primos=[];
+    // primos[0]=1;
+    // primos[1]=12;
+    // primos[2]=10;
+    // primos[3]=50;
+    // primos[4]=2;
+    // primos[5]=3;
+
+      // Array.prototype.forEach()
+          // Llama a una función para cada elemento del array.
+          // El método forEach() ejecuta la función indicada 
+          // una vez por cada elemento del array. 
+
+    // primos.forEach(element => {
+    //   console.log(element);
+    // });
+      
+      // Array.prototype.keys()
+        // Devuelve un nuevo Array Iterator que 
+        // contiene las claves para cada índice en el array.
+        // El método keys() devuelve un nuevo objeto  Array
+        //  Iterator que contiene las claves de índice con las que acceder a cada elemento en el array.
+    //  let iterator=primos.keys();
+    //  for(let key of iterator){
+    //    console.log(key);
+    //  }
+
+
+
+      // Array.prototype.map()
+        // Crea un nuevo array con el resultado de llamar a la función
+        //  proporcionada sobre cada elemento de este array.
+
+        // El método map() crea un nuevo array con los resultados de la 
+        // llamada a la función indicada aplicados a cada uno de sus elementos.
+            //funcion que multiplica:
+    // const doubles=primos.map(x => x*2 )
+    // console.log(doubles);
+
+            //ejemplo de zare ..no se ha encontrado un ejemplo asi en la web
+    //  var numbers=[1,4,9];
+    //   const doble=numbers.map(number=>number*2)
+    //   console.log(doble);
+          
+            // raiz cuadrada:
+    // const numbers=[25,36,144];
+    // let raiz=numbers.map(Math.sqrt);
+    // console.log(raiz);
+
+            //PROFUNDIZANDO:
+        // Procesar un array de números aplicándoles la raíz cuadrada
+          // El siguiente código itera sobre un array de números, aplicándoles 
+          // la raíz cuadrada a cada uno de sus elementos, produciendo un nuevo 
+          // array a partir del inicial.
+    // const numeros=[1,4,9];
+    // let raiz=numeros.map(Math.sqrt);
+    // console.log(raiz);
+
+
+       // Usando map para dar un nuevo formato a los objetos de un array
+          // El siguiente código toma un array de objetos y crea un nuevo array 
+         // que contiene los nuevos objetos formateados.
+
+    // const array=[
+    //   {clave:1,valor:10},
+    //   {clave:2,valor:20},
+    //   {clave:3,valor:30}
+    // ];
+
+    // const reformatiandoArray=array.map((obj)=>{
+    //   let reformObj={};
+    //   reformObj[obj.clave]=obj.valor;
+    //   return reformObj;
+    // });
+          //ya esta reformateado en reformatiandoArray
+    // console.log(reformatiandoArray);
+          //array aun sigue teniendo su antiguo formato:
+    // console.log(array);
+      
+
+        // Mapear un array de números usando una función con un argumento
+          // El siguiente código muestra cómo trabaja map cuando se utiliza una 
+          // función que requiere de un argumento. El argumento será asignado automáticamente a cada elemento del arreglo conforme map itera el arreglo original.
+    // const numeros=[1,4,9];
+    // let bobles=numeros.map((num)=>{
+    //   return num *2;
+    // })
+    // console.log(bobles);
+
+        // Usando map de forma genérica
+          // Este ejemplo muestra como usar map en String para obtener un arreglo de 
+          // bytes en codifcación ASCII representando el valor de los caracteres
+    // const map=Array.prototype.map;
+    // const valores=map.call('Hello World',(char)=>{
+    //   return char.charCodeAt(0);
+    // });
+    // console.log(valores);
+
+            //ESTE AUN ME FALTA COMPRNDER PARECE QUE GURAD LA PETICION SELECCIONADA EN LA WED
+        // Usando map genérico con querySelectorAll
+        // Este ejemplo muestra como iterar sobre una colección de objetos obtenidos por
+        //  querySelectorAll. En este caso obtenemos todas las opciones seleccionadas en pantalla y se imprimen en la consola
+
+    // var elems = document.querySelectorAll('select option:checked');
+    // var values = [].map.call(elems, function(obj) {
+    //  return obj.value;
+    //   });
+    //   console.log(values);
+
+        // Usando map para invertir una cadena
+    // let str ='12345';
+    // [].map.call(str,(x) =>{
+    //   return x;
+    // }).reverse().join('');
+
+    // console.log(str);
+
+
+      // Array.prototype.reduce()
+        // Aplica una función que recibe un acumulador y 
+        // cada valor del array (de izquierda a derecha) para reducirlo a un único valor.
+    // let x=[0,1,2,3,4].reduce((valorAnterior, valorActual, indice, vector)=>{
+    //  return valorAnterior + valorActual;
+    // },10);
+    // console.log(x);//20
+
+
+      // Array.prototype.reduceRight()
+        // Aplica una función que recibe un acumulador y cada valor del array 
+        // (de derecha a izquierda) para reducirlo a un único valor.
+    // let x=[1,2,3,4,2*2].reduceRight((valorPrevio, valorActual, indice, array)=>{
+    //   return valorPrevio + valorActual;
+    // });
+    // console.log(x);//14
+
+    // let x=[1,2,3,4,2*2].reduceRight((valorPrevio, valorActual, indice, array)=>{
+    //   return valorPrevio + valorActual;
+    // },10);
+    // console.log(x);//24
+
+
+      // Array.prototype.some()
+        // Devuelve true si al menos un elemento en este array satisface 
+        // la función de testeo proporcionada.
+          // El método some() verifica si algún elemento de un array cumple con el test
+          //  implementado por la función brindada.
+                  //nota:en este caso es testeo es ver si hay un elemento mayor que 10
+    //  x=(element, index, array)=>{
+    //   return element > 10;
+    // }
+    // // let y=[2, 5, 8, 1, 4].some(x);  // fsalse
+    // let y=[12, 5, 8, 1, 4].some(x);  //true
+
+                //Ejemplo: Verificando los elementos de un array 
+                // usando funciones flecha (arrow functions)
+    // let y=[2, 5, 8, 1, 4].some(elem => elem > 10);  // false
+    // let y=[12, 5, 8, 1, 4].some(elem => elem > 10); // true   
+
+    // console.log(y);
+
+
+      // Array.prototype.values()
+        // Devuelve un nuevo objeto Array Iterator que contiene
+        //  los valores para cada índice en el array.
+    //       const a = ['w', 'y', 'k', 'o', 'p']; 
+    // let iterator = a.values();
+    // let x=iterator.next().value;
+    // console.log(x); // w 
+
+
+    // const a = ['w', 'y', 'k', 'o', 'p']; 
+    // let iterator = a.values();
+
+    // console.log(iterator.next().value); // w 
+    // console.log(iterator.next().value); // y 
+    // console.log(iterator.next().value); // k 
+    // console.log(iterator.next().value); // o 
+    // console.log(iterator.next().value); // p
+
+
+  //ITERACION USANDO UN BUCLE FOR... OF:
+
+    // const arr = ['w', 'y', 'k', 'o', 'p'];
+    // let iterador = arr.values();
+
+    // for (let letra of iterador) {
+    //   console.log(letra);
+    // }
 
 
     </script>
@@ -625,3 +831,22 @@ console.log(total);
 </body>
 
 </html>   -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
