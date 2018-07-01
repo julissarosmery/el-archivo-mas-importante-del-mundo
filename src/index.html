@@ -149,21 +149,21 @@
     }
   }
 
-  let usuario = [
-  {
-      'id' : '46644620',
-      'name' : 'julissa',
-      'age' : 27,
-      'district' : 'Chorrillos'
-  },
+  // let usuario = [
+  // {
+  //     'id' : '46644620',
+  //     'name' : 'julissa',
+  //     'age' : 27,
+  //     'district' : 'Chorrillos'
+  // },
 
-    {
-      'id' : '72352825',
-      'name' : 'jahzell',
-      'age' : 18,
-      'district' : 'Breña'
-  }
-  ]
+  //   {
+  //     'id' : '72352825',
+  //     'name' : 'jahzell',
+  //     'age' : 18,
+  //     'district' : 'Breña'
+  // }
+  // ]
 
   let progreso2 = Object.keys(progreso);
   console.log(progreso2); 
@@ -216,7 +216,7 @@
     // listNumbres=[1,2,3,true,5,6,"laguna",8,9,11];
     // console.log(listNumbres.length);
 
-        //arraye q se va a manipular
+        //array q se va a manipular
     // listNumbres=["b","c","a",true,5,6,"laguna",8,9,11];
 
         //para ordenar alfabeticament 
@@ -241,6 +241,348 @@
     // list[8]=9;
 
     // console.log(list);
+        //los array tambien pueden tener strings ,numbrers decimals
+    // arrayVariado=[3,"hola mundo",3627.5];
+    // console.log(arrayVariado[0]);
+    // console.log(arrayVariado[1]);
+    // console.log(arrayVariado[2]);
+        //se selecciona dentro del array luego dentro del elemento atravez de sus indices
+    // let questions = [
+    //   ['¿En cuántos países opera Laboratoria?', 4],
+    //   ['¿Cuál es la capital de Perú?', 'Lima'],
+    //   ['¿Cuál es baile típico Chileno?', 'Cueca'],
+    //   ['¿Cuál es la moneda de México?', 'Peso'],
+    // ];
+    // console.log(questions[3][1]);
+    //creando un array de primos ..el length 34 es 35  por que existen 35 elementos
+    // primos=[];
+    // primos[0]="anyi";
+    // primos[1]="cris";
+    // primos[2]="alexa";
+    // primos[3]="alizon";
+    // primos[4]="danfer";
+    // primos[5]="jaty";
+    // primos[6]="gise";
+    // primos[7]="katy";
+    // primos[34]="jorge";
+    // console.log(primos);
+
+        //estos son los metpodos de los arrays ..hay muchos mas
+    // [].concat
+    // [].length   propiedad
+    // [].map
+    // [].push    metodo
+    // [].keys
+      
+          //Array.prototype.length  PORPIEDAD
+    //  let arr=[0,0,0];
+    //   //para saber su longitud
+    //   console.log(arr.length);
+    //   //para ver que typo de es
+    //   console.log(typeof arr.push);
+    //   //para añadir uno
+    //   console.log(arr.push(1));
+    //   //para comparar
+    //   console.log(arr,[0,0,0,1]);
+          //ARRAY.PROTOTYPE.PUSH  METODO
+    //   let arr=[0,0,0];
+    //   arr[arr.length]=1;
+    //   console.log(arr,[0, 0, 0, 1]);
+
+          //ARRAY.PROTOTYPE.POP  METODO   extrae el último elemento del arreglo y lo retorna
+      // arr=['oh','my','god'];
+      // // arr.pop();
+      // console.log(arr.pop());
+      // console.log(arr);
+      
+      //ARRAY.PROTOTYPE.SLICE     crea un nuevo arreglo con una copia superficial (shallow copy) 
+    //   arr=[3,2,1];
+    //   //comienza a mostrar desde el indice 0
+    //  console.log(arr.slice(0),[3,2,1]);
+    //   //comienza a mostrar desde el indice 1     
+    //  console.log(arr.slice(1),[3,2,1]);
+    //   //comienza a mostrar desde el indice 2     
+    //  console.log(arr.slice(2),[3,2,1]);
+     
+
+//METODOS DEL ARRAY:
+
+  //METODOS  DE MUTACION:
+    //Estos metodos modifican el array:
+
+// Array.prototype.fill()
+        // Rellena todos los elementos de un array desde un índice de inicio hasta un índice de fin con un valor determinado.   
+    // primos=[];
+    // primos[0]="anyi";
+    // primos[1]="cris";
+    // primos[2]="alexa";
+    // primos[3]="alizon";
+    // primos[4]="danfer";
+    // primos[5]="jaty";
+    // primos[6]="gise";
+    // primos[7]="katy";
+    // primos[34]="jorge";
+
+    // primos.fill(33);
+    // console.log(primos);
+
+      // Array.prototype.copyWithin()
+        // Copia una secuencia de elementos dentro del array.
+
+    // primos=[];
+    // primos[0]="anyi";
+    // primos[1]="cris";
+    // primos[2]="alexa";
+    // primos[3]="Alizon";
+    // primos[4]="danfer";
+    // primos[5]="jaty";
+    // primos[6]="Gise";
+    // primos[7]="katy";
+    // primos[8]=22;
+    // primos[9]=1;
+    // primos[10]=12;
+    // primos[11]=10;
+    // primos[12]=50;
+    // primos[13]=2;
+    // primos[14]=3;
+    // primos[34]="jorge";
+          // apartir del indice 7 copia la secuencia desde el indice 1
+    // let x=primos.copyWithin(7,1);
+    // console.log(x);
+
+      // Array.prototype.pop()
+        // Elimina el último elemento de un array y devuelve dicho elemento.
+    // primos.pop();
+
+      // Array.prototype.push()
+        // Añade uno o más elementos al final de un array y devuelve la nueva longitud del array.
+    // primos.push('narix',8,'manos','xhr');
+
+      // Array.prototype.reverse()
+        // Invierte el orden de los elementos de un array — el primero 
+          // será el último y el último será el primero.
+    // primos.reverse();
+
+      // Array.prototype.shift()
+        // Elimina el primer elemento de un array y devuelve dicho elemento.
+    // primos.shift();
+
+      // Array.prototype.sort()
+        // Ordena los elementos de un array y devuelve el array.
+          // las mayusculas siempre iran primero por el codigo ascci
+          // en los numeros 10 es antes que 2.
+    // primos.sort();
+
+      // Array.prototype.splice()
+        // Añade o elimina elementos de un array.
+                //elimina y remplasa elementos desde la pocicion 4 quitale dos y ponle dia
+    // primos.splice(4,2,'dia');
+
+                //al la pocicion 4 añadele dia y quitale los elementos ..
+      // esto ase que solo se leñadan elementos empujando a los que ya existian
+    // primos.splice(4,0,'dia');
+      
+
+      // Array.prototype.unshift()
+        // Añade uno o más elementos al principio del array y devuelve la nueva longitud del array.
+    // primos.unshift('noche');
+
+    // console.log(primos);
+
+  //METODOS DE CONSULTA:
+      // Estos métodos no modifican el array y devuelven alguna representación del array.
+        
+    //   primos=[];
+    // primos[0]="anyi";
+    // primos[1]="cris";
+    // primos[2]="alexa";
+    // primos[3]="Alizon";
+    // primos[4]="danfer";
+    // primos[5]="jaty";
+    // primos[6]="Gise";
+    // primos[7]="katy";
+    // primos[8]=22;
+    // primos[9]=1;
+    // primos[10]=12;
+    // primos[11]=10;
+    // primos[12]=50;
+    // primos[13]=2;
+    // primos[14]=3;
+    // primos[34]="jorge";
+    // hermanos =[1,2,3,4,5,6,7];
+    
+      // Array.prototype.concat()
+        // Devuelve un nuevo array compuesto por este array unido con 
+          // otro(s) array(s) y/o valor(es).
+          //como extra se guardo en un let  con el nombre x
+    // let x=primos.concat(hermanos);
+
+    // console.log(x);
+
+      // Array.prototype.includes()
+        // Determina si un array contiene cierto elemento, devolviendo true o false apropiadamente.
+    // let x=primos.includes('jorge');
+             //se le puede hacer desde la cosola promos.includes().
+              // pero desde aqui si la queremos ver 
+              // se tienen que englovar la consulta en este caso le icimos un let voriable x.
+    // console.log(x);
+               //al no modicar si se le hace un console.log a la variable no se beran cambios 
+    // console.log(primos);
+
+      // Array.prototype.indexOf()
+          // Devuelve el primer (menor) índice de un 
+          //  dentro del array que sea igual al valor 
+          // especificado, o -1 si no contiene dicho valor.
+              //el valor 'danfer est aen pa pocicion 4'
+    // let x =primos.indexOf('danfer');
+              //el valor 'danfer' esta hasta la pacicion 4
+    // let x =primos.indexOf('danfer',4);
+
+              // el valor 'danfer'no esta hasta la pocicion 5 reorta -1 en consola
+    // let x =primos.indexOf('danfer',5);
+    // console.log(x);
+
+    // primos=[];
+    // primos[0]="anyi";
+    // primos[1]="cris";
+    // primos[2]="alexa";
+    // primos[3]="Alizon";
+    // primos[4]="danfer";
+    // primos[5]="jaty";
+    // primos[6]="Gise";
+    // primos[7]="katy";
+    // primos[8]='katy';
+    // primos[9]=1;
+    // primos[10]=12;
+    // primos[11]=10;
+    // primos[12]=50;
+    // primos[13]=2;
+    // primos[14]=3;
+    // primos[34]="jorge";
+      
+      // Array.prototype.join()
+        // Une todos los elementos de un array en una
+        //  cadena de texto.
+           //con comas
+    // let x=primos.join();
+          //todo junto
+    // let x=primos.join('');
+          //sepaqrados por -
+    // let x=primos.join('-');
+    // console.log(x);      
+
+
+      // Array.prototype.lastIndexOf()
+        // Devuelve el último (mayor) índice de un elemento dentro 
+        // del array que sea igual al valor especificado, o -1 si no contiene dicho valor.
+    // let x= primos.lastIndexOf('katy');
+        // devolvera 8
+    // console.log(x);
+
+
+      // Array.prototype.slice()
+        // Extrae una sección de un array y devuelve un nuevo array.
+        // devuelve una copia de una parte del array dentro de un nuevo array empezando 
+        // por inicio hasta fin (fin no incluido). El array original no se modificará.
+    // let x=primos.slice(1,4);
+    // console.log(x);
+
+      // Array.prototype.toString()
+        // Devuelve una cadena de texto que representa el array
+        //  y sus elementos. Reemplaza el método Object.prototype.toString().
+          // nota:desde mi punto de vista se parece a ,join()
+      // let x=primos.toString();
+      // console.log(x);
+
+
+  // METODO DE ITERACION 
+
+    // primos=[];
+    // primos[0]="anyi";
+    // primos[1]="cris";
+    // primos[2]="alexa";
+    // primos[3]="Alizon";
+    // primos[4]="danfer";
+    // primos[5]="jaty";
+    // primos[6]="Gise";
+    // primos[7]="katy";
+    // primos[8]='katy';
+    // primos[9]=1;
+    // primos[10]=12;
+    // primos[11]=10;
+    // primos[12]=50;
+    // primos[13]=2;
+    // primos[14]=3;
+    // primos[34]="jorge";
+
+      // Array.prototype.entries()
+        // Devuelve un nuevo objeto Array 
+        // Iterator que contiene los pares clave/valor para cada índice en el array.
+    // let x=primos.entries();
+    // console.log(x.next().value);// [0, "anyi"]
+    //  console.log(primos.entries());
+    
+      // Array.prototype.filter()
+    //       // Crea un nuevo array con todos los elementos de este 
+    //       // array para los cuales la función de filtrado proporcionada devuelve true.
+                //para numeros:
+    // primos=[];
+    // primos[0]=1;
+    // primos[1]=12;
+    // primos[2]=10;
+    // primos[3]=50;
+    // primos[4]=2;
+    // primos[5]=3;
+    //   y=(z)=>{
+    //     return z < 51;
+    //   }
+    //   console.log(primos.every(y));//true
+               
+                //para stings:
+    // hermanos = ['nato', 'celsin', 'anyelon', 'lucholuis', 'gisella', 'katy'];
+    // const result = hermanos.filter(hermanos => hermanos.length > 6);
+    // console.log(result);// ["anyelon", "lucholuis", "gisella"]
+
+      // Array.prototype.find()
+        // Devuelve el elemento hallado en el array si un elemento en el array 
+        // satisface la función de testeo proporcionada, o undefined 
+        // si no se halla ninguno.
+          // El método find() devuelve el valor del primer elemento del 
+          //  que cumple la función de prueba proporcionada. En cualquier 
+          //  otro caso se devuelve undefined.
+    //     primos=[];
+    //   primos[0]=1;
+    //   primos[1]=12;
+    //   primos[2]=10;
+    //   primos[3]=50;
+    //   primos[4]=2;
+    //   primos[5]=3;
+      
+    // encontrar=primos.find((ele)=>{
+    //   return ele >10;
+    // });
+    // console.log(encontrar);//12
+
+          //Encontrar un objeto en un array por una de sus propiedades
+    //     var familia = [
+    //     {nombre: 'julissa', edad: 27},
+    //     {nombre: 'nato', edad: 23},
+    //     {nombre: 'ccelsin', edad: 17}
+    // ];
+          // en ES5:
+    // function esnato(ele) { 
+    //     return ele.nombre === 'nato';
+    // }
+    // console.log(familia.find(esnato));
+          //en ES6:
+    //  esnato=(hermana)=> { 
+        // return hermana.nombre === 'nato';
+    // }
+    // console.log(familia.find(esnato));
+          //en ES6 flecha
+    // const resultado = familia.find(hermana => hermana.nombre === 'nato' );
+
+    // console.log(resultado);
 
 
 
@@ -257,11 +599,27 @@
   title>practicando</title>
 </head>
 <body>
-    
-  
 <script>
 
+total={};
+  objeto1={
+    nombre:'julissa',
+    apellidos:'ibarra chavez',
+    edad:27,
+    año:2018,
+  },
+  objeto2={
+    nombre:'rosmery',
+    apellidos:'ibarra chavez',
+    edad:28,
+    año:2019,
+  }
 
+
+
+
+// arreglo=[objetos];
+console.log(total);
 
 </script>
 </body>
